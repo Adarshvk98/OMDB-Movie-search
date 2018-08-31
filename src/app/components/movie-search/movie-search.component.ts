@@ -24,13 +24,16 @@ export class MovieSearchComponent implements OnInit {
   search_movies() {
     if (this.input && this.Genre) {
       this.movie_service.getMovies(this.input, this.year, this.Genre).subscribe((data) => {
-        if (data.Response === 'False') {
+        this.movie = data;
+        this.movie_service.movieUrl.next(this.movie);
+        this.show = true;
+        /* if (data.Response === 'False') {
         this.toast.error('Searched item is not found or Something went wrong', 'Not Found');
       } else {
         this.movie = data;
         this.movie_service.movieUrl.next(this.movie);
         this.show = true;
-      }
+      } */
     });
     } else {
       this.toast.error('Please fill the requied feild', 'Required');
