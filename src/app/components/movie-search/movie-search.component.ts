@@ -12,7 +12,7 @@ export class MovieSearchComponent implements OnInit {
   input: string;
   year: string;
   Genre: string;
-  public movie: Movies;
+  public movie = {};
   show = false;
   constructor(
     private movie_service: MoviesService,
@@ -24,7 +24,7 @@ export class MovieSearchComponent implements OnInit {
   search_movies() {
     if (this.input && this.Genre) {
       this.movie_service.getMovies(this.input, this.year, this.Genre).subscribe((data) => {
-      if (data.Response === 'False') {
+        if (data.Response === 'False') {
         this.toast.error('Searched item is not found or Something went wrong', 'Not Found');
       } else {
         this.movie = data;
