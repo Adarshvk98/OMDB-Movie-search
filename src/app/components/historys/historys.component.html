@@ -1,0 +1,13 @@
+
+<div id="wrapper">
+  <ul *ngFor="let movies of searchHistory.slice().reverse() | slice:0:5">
+    <li class="blue">
+      <a href="#" (click)="search_movies(movies)" [routerLink]="['/search_list']">
+        <p class="line1">{{movies.Title}}
+          <span class="time">{{ movies.TimeOfSearch | date:'HH:mm:ss' | convertFrom24To12Format}}</span>
+        </p>
+      </a>
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>

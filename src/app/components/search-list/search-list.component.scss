@@ -1,0 +1,214 @@
+.moviecard{
+	font-family: 'Helvetica', sans-serif, 'Ariel';
+	position: relative;
+	background: #ffffff;
+	color: #555555;
+    margin: 50px auto;
+    width: 600px;
+    max-width: 800px;
+    min-height: 300px;
+    padding: 25px 290px 25px 25px;
+	-moz-box-shadow: -5px 5px 15px;
+	-webkit-box-shadow: -5px 5px 15px;
+   box-shadow: -5px 5px 15px;
+   border-radius: 5px;
+
+  #movie-content{ 
+    opacity: 1; 
+    width: 100%;
+    display: table; 
+    transition: all 500ms ease-out;
+    position: relative;
+  }
+
+  .movie-title{
+    font-size: 23px;
+    font-weight: 600;
+	  padding-bottom: 6px;
+	  color: #333333;
+
+    .movie-year{
+      margin-left: 12px;
+    	font-size: 16px;
+    }
+
+   	a{
+   		color: #333333;
+      text-decoration: none;;
+
+      &:hover{
+        color: #858585;
+      }
+    }
+  }
+
+  .movie-details{
+    font-size: 12px;
+    padding-bottom: 24px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #dbdbdb;
+
+    span{
+      padding: 0px 6px;
+      border-right: 1px solid #dbdbdb;
+
+      &:last-child{ border: none; }
+    }
+  }
+
+  .movie-castcrew{
+    padding-top: 12px;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    span.title{
+      color: #333333;
+      display: inline-block;
+      width: 80px;
+      font-weight: 600;
+    }
+
+    span.name{
+    }
+  }
+
+  .movie-synopsis{
+    margin: 24px 0px;
+    padding-top: 24px;
+    border-top: 1px solid #dbdbdb;
+    max-height: 130px;
+    height: 130px;
+    overflow-y: hidden;
+    width: 100%;
+  }
+
+  .movie-ratings{
+    position: absolute;
+    right: 0px;
+
+    span.star{
+      display: inline-block;
+      margin-right: 12px;
+      color: #F0DE00;
+      font-size: 36px;
+    }
+
+    span.score{
+      font-size: 30px;
+      color: #333333;
+    }
+  }
+
+  .movie-trailer-btn{
+    text-transform: uppercase;
+    outline: none;
+    padding: 15px 50px;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #333333;
+    &:hover{
+      text-decoration: underline;
+
+      &:before{ color: #333333; }
+      &:after{ border-color: #333333; }
+    }
+
+    &:before{
+      content: '▸';
+      font-size: 30px;
+      color: #333333;
+      position: absolute;
+      top: 2px;
+      left: 18px;
+      width: 22px;
+    }
+
+    &:after{
+      content: "";
+      width: 20px;
+      height: 20px;
+      border: 1px solid #333333;
+      border-radius: 50%;
+      position: absolute;
+      left: 18px;
+      top: 12px;
+    }
+  }
+
+  .movie-trailer{
+    width: 0px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    transition: all 500ms;
+    top: 0px;
+    background: #ffffff;
+    z-index: 1;
+    padding: 60px 40px 60px 60px;
+    border-radius: 5px;
+
+    a.back-btn{
+      color: #333333;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 6px 12px 6px 18px;
+      position: absolute;
+      top: 12px;
+      left: 300px;
+      text-transform: uppercase;
+      font-size: 12px;
+      cursor: pointer;
+
+      &:before{
+        content: '⌜';
+        position: absolute;
+        left: 5px;
+        top: 1px;
+        transform: rotate(-45deg);
+        font-size: 20px;
+      }
+
+      &:hover{
+        color: #333;
+      }
+    }
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .movie-poster{
+    position: absolute;
+    background: url("https://vignette.wikia.nocookie.net/citrus/images/6/60/No_Image_Available.png");
+    background-color: #dbdbdb;
+    background-size: 360px 540px;
+    background-repeat: no-repeat;
+    height: 0;
+    width: 360px;
+    height: 540px;
+    right: -100px;
+    top: -20px;
+    -moz-box-shadow: -2px 2px 7px rgba(0,0,0,0.6);
+    -webkit-box-shadow: -2px 2px 7px rgba(0,0,0,0.6);
+    box-shadow: -2px 2px 7px rgba(0,0,0,0.6);
+    cursor: pointer;
+    transition: all 500ms ease-out;
+    z-index: 10;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    margin-bottom: 10px;
+  }
+}
