@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Subject, ReplaySubject } from 'rxjs';
-import { map } from 'rxjs/Operators';
+import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
