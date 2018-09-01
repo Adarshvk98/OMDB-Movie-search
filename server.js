@@ -7,7 +7,7 @@ app.use(express.static('./dist/movies'));
 
 app.get('/*', function(req,res) {
     
-res.sendFile('./dist/movies/index.html');
+res.sendFile(`${process.env.PWD}/dist/movies/index.html`);
 });
 
 // Start the app by listening on the default Heroku port
