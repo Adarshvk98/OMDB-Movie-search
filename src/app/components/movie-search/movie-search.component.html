@@ -2,7 +2,12 @@
   <form class="search-container">
     <input type="text" id="search-bar" placeholder="Search by movie Title" [(ngModel)]="input" name="input" required>
     <input type="text" id="search-bar" placeholder="Year (optional)" [(ngModel)]="year" name="year">
-    <input type="text" id="search-bar" placeholder="movie, series, episode" [(ngModel)]="Genre" name="Genre">
+    <select class="selectbox" [(ngModel)]="Genre" name="Genre">
+      <option selected disabled hidden>Choose here</option>
+      <option selected value="movie" >Movie</option>
+      <option value ="series" >Series</option>
+      <option value ="episode">Episode</option>
+    </select>
     <a href="#" (click)="search_movies()" [routerLink]=" ['/search_list']">
       <img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png">
     </a>
